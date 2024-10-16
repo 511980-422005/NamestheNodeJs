@@ -1,6 +1,8 @@
-const auth = (req,res,next)=>{
+function auth (req,res,next){
 var {token} = req.query;
 if(token == '123'){
+    
+    console.log("Authorized ");
     next();
 }
 else{
